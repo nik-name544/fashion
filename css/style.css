@@ -53,7 +53,8 @@ li {
 }
 
 .container {
-    width: 98.7vw;
+    width: 100%;
+    max-width: 1760px;
     margin: 0 auto;
 }
 
@@ -66,7 +67,8 @@ li {
     justify-content: space-between;
     align-items: center;
     display: flex;
-    margin: 26px 80px;
+    height: 100px;
+    margin: 0px 80px;
 }
 
 .header__logo {
@@ -197,6 +199,12 @@ li {
     opacity: 0.8;
 }
 
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 35px;
+}
+
 .swiper-pagination-bullet {
     background-color: #fff;
     opacity: 0.3;
@@ -235,41 +243,23 @@ li {
     margin-bottom: 6vh;
     text-align: center;
     width: 24vw;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.34);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.34);
+    transition: 0.5s linear;
+}
+
+.content__item:hover {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
 }
 
 .content__item-img {
     width: 24vw;
 }
 
-.content__item-box {
-    -webkit-box-shadow: 1.5px 1.5px 5px 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 1.5px 1.5px 5px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: 1.5px 1.5px 5px 0px rgba(0, 0, 0, 0.3);
-    margin-top: -5px;
-    width: 24vw;
-}
-
-.content__item-box1 {
-    -webkit-box-shadow: -1.5px 1.5px 5px 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: -1.5px 1.5px 5px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: -1.5px 1.5px 5px 0px rgba(0, 0, 0, 0.3);
-    margin-top: -5px;
-    width: 24vw;
-}
-
-.content__item-box2 {
-    -webkit-box-shadow: -1.5px 0px 5px 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: -1.5px 0px 5px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: -1.5px 0px 5px 0px rgba(0, 0, 0, 0.3);
-    margin-top: -5px;
-    width: 24vw;
-}
-
-.content__item-box3 {
-    -webkit-box-shadow: 1.5px 0px 5px 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 1.5px 0px 5px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: 1.5px 0px 5px 0px rgba(0, 0, 0, 0.3);
-    margin-top: -5px;
+.content__item {
     width: 24vw;
 }
 
@@ -297,6 +287,11 @@ li {
     color: #666666;
     padding: 6px 0 10px;
     font-size: 12px;
+}
+
+.about__inner {
+    width: 100%;
+    margin: 0 auto;
 }
 
 .author__content a {
@@ -425,18 +420,20 @@ li {
 }
 
 .about-author__post-inner {
-    -webkit-box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.2);
-    margin-top: -5px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.34);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.34);
+    transition: 0.5s linear;
     margin-bottom: 70px;
 }
 
+.about-author__post-inner:hover {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
 .about-author__box {
-    -webkit-box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.2);
-    margin-top: -5px;
     margin-bottom: 30px;
     transition: 0.5s;
     width: 18vw;
@@ -720,8 +717,8 @@ li {
 
 .tag__item {
     background-color: #f8f9fa;
-    padding: 0.9vh 0.6vw;
-    margin: 2px;
+    padding: 2.8vh 1vw;
+    margin: 4px;
     font-size: 14px;
     color: #666666;
     transition: all 0.5s;
@@ -740,13 +737,23 @@ li {
     width: 100%;
 }
 
-.content__bottom-box {
+.content__bottom-item-top {
     padding-left: 30px;
     padding-right: 126px;
-    -webkit-box-shadow: 0px 1px 9px -1px rgba(0, 0, 0, 0.43);
-    -moz-box-shadow: 0px 1px 9px -1px rgba(0, 0, 0, 0.43);
-    box-shadow: 0px 1px 9px -1px rgba(0, 0, 0, 0.43);
+}
+
+.content__bottom-box {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.34);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.34);
+    transition: 0.5s linear;
     margin: -5px 0 30px;
+}
+
+.content__bottom-box:hover {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 .content__bottom-box .author {
@@ -887,7 +894,8 @@ li {
 }
 
 .footer__items li {
-    margin-right: 35px;
+    margin-right: 36px;
+    margin-left: -6px;
 }
 
 .footer__item-link {
